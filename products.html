@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Paradise Nursery</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="products.html">Productos</a></li>
+                <li><a href="cart.html">Carrito (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Listado de Productos</h1>
+        <div class="product-list"></div> <!-- Asegúrate de que la lista de productos esté aquí -->
+        <script>
+            const products = [
+                {
+                    name: 'Planta Aromática',
+                    description: '¿Quién necesita un aire fresco de la naturaleza cuando tienes a esta planta aromática? La magia de las especias se fusiona en una explosión de fragancias que podrían hacer que tu cocina se sienta como un restaurante de cinco estrellas. ¡Cuidado con no ponerle un delantal!.',
+                    cost: 10,
+                    image: 'images/aroma.jpg' // Ajusta la ruta según la ubicación de tus imágenes
+                },
+                {
+                    name: 'Cactus',
+                    description: 'El mejor amigo de las personas olvidadizas. No necesita agua, cariño ni atención, solo un lugar soleado y tu desprecio ocasional. Perfecto para aquellos que quieren una planta pero no quieren comprometerse. ¡Dale un poco de luz y olvídate de él, y seguirá feliz!',
+                    cost: 12,
+                    image: 'images/cactus.jpg' // Ajusta la ruta
+                },
+                {
+                    name: 'Rosas',
+                    description: 'Las rosas son como los dramas de telenovela: hermosas, románticas, y con espinas. Te enamorarán a primera vista, pero si no tienes cuidado, ¡podrías terminar con un pinchazo! Ideal para expresar amor, pero asegúrate de acompañarlas con un paquete de curitas.',
+                    cost: 15,
+                    image: 'images/rosas.jpg' // Ajusta la ruta
+                },
+                {
+                    name: 'Planta de fuego',
+                    description: 'La planta de fuego es como esa amiga que siempre está encendida en la fiesta. Brillante, vibrante y lista para atraer todas las miradas. Si buscas algo que haga que tu hogar se sienta como un festival de luces, esta es la planta para ti. Solo recuerda, no es un juguete, ¡no la toques si no quieres quemarte!',
+                    cost: 16,
+                    image: 'images/Fuego.jpg' // Ajusta la ruta
+                },
+                {
+                    name: 'Planta venenosa',
+                    description: '¡Atención! Esta planta venenosa es la reina del drama. Hermosa, intrigante, pero con un carácter que podría hacer temblar a cualquier intruso. Ideal para mantener a raya a esos invitados no deseados, o para impresionar a tus amigos con tus conocimientos botánicos de "plantas peligrosas". Solo recuerda: ¡mira, pero no toques!',
+                    cost: 18,
+                    image: 'images/veneno.jpg' // Ajusta la ruta
+                },
+                {
+                    name: 'Planta Medicinal',
+                    description: 'La planta medicinal es el equivalente botánico a ese amigo que siempre tiene un remedio para todo. Te hará sentir mejor con solo mirarla. Sin embargo, no te engañes; no es una pastilla mágica. Necesitarás un poco de conocimiento para sacar su verdadero potencial. ¡Pero cuando lo hagas, estarás listo para abrir tu propia clínica de curas naturales!',
+                    cost: 15,
+                    image: 'images/medicina.jpg' // Ajusta la ruta
+                }
+            ];
+
+            const productList = document.querySelector('.product-list');
+
+            products.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <h2>${product.name}</h2>
+                    <p>${product.description}</p>
+                    <p>Precio: $${product.cost}</p>
+                    <button onclick="addToCart()">Agregar al Carrito</button>
+                `;
+                productList.appendChild(card);
+            });
+        </script>
+
+        <a href="cart.html" class="btn">Ir al Carrito</a>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

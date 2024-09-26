@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Columna responsiva */
+    gap: 20px; /* Espacio entre tarjetas */
+    padding: 20px; /* Espacio alrededor de la cuadrícula */
+}
+
+.product-card {
+    border: 1px solid #ccc; /* Borde de la tarjeta */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta partes que sobresalen */
+    text-align: center; /* Centra el texto */
+    background-color: #f9f9f9; /* Fondo claro */
+}
+
+.product-card img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.product-card h2 {
+    margin: 10px 0; /* Margen alrededor del título */
+}
+
+.product-card p {
+    margin: 5px 0; /* Margen alrededor de la descripción y precio */
+}
+
+.product-card button {
+    background-color: #4CAF50; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+.product-card button:hover {
+    background-color: #45a049; /* Color al pasar el mouse */
+}
